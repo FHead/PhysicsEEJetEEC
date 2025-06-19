@@ -62,6 +62,17 @@ void FourVector::SetPtEtaPhi(double pt, double eta, double phi)
    SetPtEtaPhiMass(pt, eta, phi, 0);
 }
 //----------------------------------------------------------------------------
+void FourVector::SetXYZMass(double x, double y, double z, double mass)
+{
+   P[1] = x;
+   P[2] = y;
+   P[3] = z;
+
+   P[0] = sqrt(mass * mass + SpatialDot(*this));
+
+   CalculateInnerQuantities();
+}
+//----------------------------------------------------------------------------
 void FourVector::SetPtEtaPhiMass(double pt, double eta, double phi, double mass)
 {
    P[1] = pt * cos(phi);

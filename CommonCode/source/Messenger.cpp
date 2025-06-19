@@ -550,7 +550,7 @@ bool ParticleTreeMessenger::GetEntry(int iEntry)
 
    P.resize(nParticle);
    for(int i = 0; i < nParticle; i++)
-      P[i].SetPtEtaPhiMass(pt[i], eta[i], phi[i], mass[i]);
+      P[i].SetXYZMass(px[i], py[i], pz[i], mass[i]);
 
    return true;
 }

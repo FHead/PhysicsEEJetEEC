@@ -68,6 +68,7 @@ public:
    FourVector(double p[4]);
    FourVector(double e, double px, double py, double pz);
    ~FourVector();
+   void SetXYZMass(double x, double y, double z, double mass = 0);
    void SetPtEtaPhi(double pt, double eta, double phi);   // massless
    void SetPtEtaPhiMass(double pt, double eta, double phi, double mass = 0);
    void SetPtYPhi(double pt, double y, double phi);   // massless
