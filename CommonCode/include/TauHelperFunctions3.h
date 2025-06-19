@@ -30,6 +30,7 @@ FourVector operator *(double Scale, FourVector P);
 double GetAngle(FourVector P1, FourVector P2);
 double GetDR(FourVector P1, FourVector P2);
 double GetDPhi(FourVector P1, FourVector P2);
+double GetDTheta(FourVector P1, FourVector P2);
 double EPS(FourVector A, FourVector B, FourVector C, FourVector D);
 double GetMT(FourVector P1, FourVector P2);
 double GetMinRadius(FourVector P1, FourVector P2, FourVector P3);   // in eta-phi space

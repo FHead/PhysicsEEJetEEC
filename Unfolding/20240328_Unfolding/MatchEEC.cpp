@@ -574,13 +574,13 @@ double MatchingMetricCore( double deltaTheta, double deltaPhi, double deltaE,
 }
 
 double MatchingMetric(FourVector A, FourVector B){
-   double Angle = GetAngle(A,B);
+   double dTheta = GetDTheta(A,B);
    double dPhi = GetDPhi(A,B); 
    double Ediff = (A[0] - B[0]);
    double meanE = (A[0] + B[0])/2;  
 
    double _chiTheta, _chiPhi, _chiE;
-   double chi2metric = MatchingMetricCore( Angle, dPhi, Ediff,
+   double chi2metric = MatchingMetricCore( dTheta, dPhi, Ediff,
                                            meanE, MatchingSchemeChoice,
                                            _chiTheta, _chiPhi, _chiE);
    return chi2metric; 
